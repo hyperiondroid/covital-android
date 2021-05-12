@@ -17,6 +17,10 @@ class MeasurementResultFragment : BaseFragment<FragmentMeasurementResultBinding>
             R.string.measurement_result_screen_value,
             sharedViewModel.measuredValue
         )
+        binding.measurementBpm = resources.getString(
+                R.string.measurement_bpm_result_screen_value,
+                sharedViewModel.measuredBpmValue
+        )
         binding.viewModel = sharedViewModel
 
     }

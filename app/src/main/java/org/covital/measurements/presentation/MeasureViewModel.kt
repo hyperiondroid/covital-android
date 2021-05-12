@@ -37,13 +37,13 @@ class MeasureViewModel(
         }
     }
 
-    fun onAnalyzerResult(o2: Int) {
+    fun onAnalyzerResult(o2: Int, bpm: Int) {
         if (o2 <= 0) {
             _recording.value = false
         } else {
             _recording.value = false
             isFirstRecording = true
-            sharedViewModel.onMeasureFinished(o2)
+            sharedViewModel.onMeasureFinished(o2, bpm)
         }
     }
 

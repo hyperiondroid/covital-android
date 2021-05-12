@@ -45,7 +45,7 @@ class MeasureFragment : BaseFragment<FragmentMeasureBinding>() {
         binding.viewModel = viewModel
     }
 
-    private var onAnalyzerResult: (Int) -> Unit = { viewModel.onAnalyzerResult(it) }
+    private var onAnalyzerResult: (o2: Int,bpm: Int) -> Unit = { o2: Int, bpm: Int -> viewModel.onAnalyzerResult(o2, bpm) }
     private var onAnalyzerProgress: (Int) -> Unit = { updateProgress(it) }
     private var analyzer: O2Analyzer? = null
 

@@ -8,6 +8,9 @@
             name="measurement"
             type="String" />
         <variable
+            name="measurementBpm"
+            type="String" />
+        <variable
             name="viewModel"
             type="org.covital.measurements.presentation.MeasurementsViewModel" />
     </data>
@@ -51,16 +54,58 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             />
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="56sp"
-            android:padding="16dp"
-            android:layout_gravity="center_horizontal"
-            android:text="@{measurement}"
-            android:background="@drawable/result_background"
-            />
+            android:gravity="center"
+            android:padding="4dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="48sp"
+                android:padding="16dp"
+                android:layout_gravity="bottom"
+                android:text="O2:"
+                android:layout_marginRight="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="56sp"
+                android:padding="16dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@{measurement}"
+                android:background="@drawable/result_background"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="48sp"
+                android:padding="16dp"
+                android:layout_gravity="bottom"
+                android:text="BPM:"
+                android:layout_marginRight="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="56sp"
+                android:padding="16dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@{measurementBpm}"
+                android:background="@drawable/result_background"
+                />
+        </LinearLayout>
 
         <View
             android:layout_width="match_parent"

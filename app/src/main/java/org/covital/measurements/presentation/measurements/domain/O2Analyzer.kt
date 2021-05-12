@@ -14,7 +14,7 @@ private const val V_PLANE = 2
 
 private const val TOTAL_SECONDS = 30
 class O2Analyzer(
-    private var onResult: ((Int) -> Unit)?,
+    private var onResult: ((Int,Int) -> Unit)?,
     private var onProgress: ((Int) -> Unit)?
 ) : ImageAnalysis.Analyzer {
     private val processing = AtomicBoolean(true)
@@ -64,6 +64,7 @@ class O2Analyzer(
         val blue: Array<Double> = blueAvgList.toTypedArray()
         val hRFreq: Double = Fft.FFT(red, counter, samplingFreq)
         val bpm: Double = ceil(hRFreq * 60)
+        val bpmInt : Int = bpm.toInt()
         val meanRed: Double = sumRed / counter
         val meanBlue: Double = sumBlue / counter
 
@@ -85,10 +86,12 @@ class O2Analyzer(
             startTime = System.currentTimeMillis()
             counter = 0
             processing.set(false)
-            onResult?.invoke(0)
+            onResult?.invoke(0,0)
         } else {
             processing.set(false)
-            onResult?.invoke(o2)
+            onResult?.invoke(o2, bpmInt)
+
+
         }
     }
 

@@ -18,8 +18,9 @@
     <string name="measure_screen_error">There has been an error, please try again.</string>
 
     <string name="measurement_result_screen_title">Successful reading</string>
-    <string name="measurement_result_screen_description">This is the result of your oxygen saturation level</string>
+    <string name="measurement_result_screen_description">This is the result of your vitals:</string>
     <string name="measurement_result_screen_value">%d%%</string>
+    <string name="measurement_bpm_result_screen_value">%d</string>
     <string name="measurement_result_screen_button">Next</string>
 
     <string name="improve_measurement_screen_title">Help us improve our measurements</string>

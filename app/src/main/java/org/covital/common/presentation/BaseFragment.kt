@@ -36,6 +36,6 @@ abstract class BaseFragment<Binding: ViewDataBinding> : Fragment() {
     }
 
     protected fun setStatusBarDarkness(opacity: Float, progress: Float = 1f) {
-        (requireActivity() as? MainActivity)?.setStatusBarDarkness(opacity, progress)
+        //(requireActivity() as? MainActivity)?.setStatusBarDarkness(opacity, progress)
     }
 }
